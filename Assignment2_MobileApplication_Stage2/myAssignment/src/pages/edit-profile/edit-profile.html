@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Edit Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item id="avatarContainer">
+      <input #fileInput type="file" accept="image/*" (change)="imageSelected(fileInput.files)" id="input">
+      
+      <ion-avatar id="userAvatar"><img id="avatar" src={{newAvatar}}></ion-avatar>
+      <button id="editAvatar"><ion-icon ios="md-create"></ion-icon></button>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Nick Name</ion-label>
+      <ion-input type="text" [(ngModel)]="newNick"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Birthday</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="newDoB"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Gender</ion-label>
+      <ion-select [(ngModel)]="newGender" interface="popover">
+        <ion-option value="Female">Female</ion-option>
+        <ion-option value="Male">Male</ion-option>
+        <ion-option value="Secret">Secret</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Country</ion-label>
+      <ion-input type="text" [(ngModel)]="newContry"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Favouriate Number</ion-label>
+      <ion-input type="tel" maxlength="10" placeholder="Enter number between 1 to 10" [(ngModel)]="newFavNum"></ion-input>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-textarea clearInput=true></ion-textarea>
+    </ion-item> -->
+    <button ion-button color="mainTheme" round (click)="update()">Update Profile</button>
+  </ion-list>
+</ion-content>

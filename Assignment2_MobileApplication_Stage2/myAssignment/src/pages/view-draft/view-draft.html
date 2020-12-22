@@ -1,0 +1,14 @@
+<ion-header>
+  <div id="translusive"></div>
+  <ion-navbar>
+    <button (click)="dismissM()" ion-button icon-only color="dark" clear><ion-icon name="arrow-back"><span id="draftTitle">{{title}}</span></ion-icon></button>
+    <button (click)="navToEdit()" ion-button color="light" outline>Edit</button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  {{content}}
+
+</ion-content>

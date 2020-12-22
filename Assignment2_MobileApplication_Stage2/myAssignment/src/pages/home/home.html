@@ -1,0 +1,12 @@
+
+<ion-content class="bgImg">
+    <ion-icon name="contact" (click)="loginRegist()"></ion-icon>
+    <!-- <button (click)="clear()">Clear</button> -->
+    <h1>Mercury Novel</h1>
+    <div id="novelCategory" >
+        <button ion-button round color="novelCtg" (click)="novelCate(i)" *ngFor="let category of categories; index as i" #categoryName>{{category}}</button>
+    </div>
+
+</ion-content>
+
+<!-- html without loop -->

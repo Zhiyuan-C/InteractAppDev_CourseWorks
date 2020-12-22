@@ -1,0 +1,47 @@
+page-my {
+    .scroll-content {
+        background-color:#dee0ea;
+    }
+    .item-ios-light, .item-divider-ios-light {
+        background-color:#dee0ea;
+    }
+    ion-header {
+        background-image: url('../assets/imgs/bg.jpeg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 130px;
+    }
+    .backgroundCover {
+        padding-left: 30px;
+        background-color: rgba(0, 0, 0, 0.49);
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    #userAvatar {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        border: 5px solid rgba(0, 0, 0, 0.8);
+        overflow: hidden;
+    }
+    #avatar {
+        width: 100%;
+        height: 100%;
+    }
+    .userInfo {
+        color: white;
+        padding-left: 10px;
+        h5 {
+            margin-bottom: 0;
+        }
+        p {
+            margin-top: 0;
+        }
+    }
+    .button-ios-mainTheme{
+        margin-top: 17px;
+        width: 100%;
+    }
+}

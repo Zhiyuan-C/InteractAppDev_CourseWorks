@@ -1,0 +1,53 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Create Account</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="loginRegistBg">
+  <ion-list>
+    <!-- Required info -->
+    <ion-item>
+      <ion-label stacked><span class="require">*</span>Nick Name</ion-label>
+      <ion-input type="text" [(ngModel)]="nickName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked><span class="require">*</span>Email Address</ion-label>
+        <ion-input type="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+
+    <ion-item>
+      <ion-label stacked><span class="require">*</span>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password" maxlength="12" minlength="5"></ion-input>
+    </ion-item>
+
+    <!-- Personal info -->
+    <p>Personal Information</p>
+    <div class="dateTime">
+      <ion-label stacked>Date of Birth</ion-label>
+      <ion-item class="date">
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="DoB"></ion-datetime>
+      </ion-item>
+    </div>
+    <ion-item>
+      <ion-label stacked>Gender</ion-label>
+      <ion-select [(ngModel)]="gender" interface="popover">
+        <ion-option value="Female">Female</ion-option>
+        <ion-option value="Male">Male</ion-option>
+        <ion-option value="Secret">Secret</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Country/Region</ion-label>
+      <ion-input type="text" [(ngModel)]="country"></ion-input>
+    </ion-item>
+    
+    <!-- Create account button -->
+    <button ion-button full color="mainTheme" (click)="regist()">Create account</button>
+  </ion-list>
+  
+</ion-content>
