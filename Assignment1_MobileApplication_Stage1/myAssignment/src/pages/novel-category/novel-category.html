@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bgImg">
+  <!-- <p *ngFor="let pragraph of content">{{pragraph}}</p> -->
+  <!-- <p>{{content}}</p> -->
+  <!-- <p [innerHTML]="content"></p> -->
+  <!-- <h1 *ngFor = "let novel of cNovels; index as i">{{novel.title}}</h1> -->
+  <ion-card *ngFor = "let novel of currentCategory; index as i">
+    <ion-card-content (click)="novelPrev(i)">
+      <ion-card-title>{{novel.title}}</ion-card-title>
+      <img class="novelCover"/>
+      <!-- Username and Novel Type -->
+      <ion-row class="ionCardRowA">
+        <div>
+          by <ion-icon class="userIcon" name="contact"></ion-icon> {{novel.nickName}}
+        </div>
+        <p #novelType>{{novel.type}}</p>
+      </ion-row>
+      <p class="caption">{{novel.caption}}</p>
+    </ion-card-content>
+    <!-- Buttons -->
+    <ion-row no-padding class="ionCardButtons">
+      <div *ngIf="novel.collections == false; then addLike; else removeLike;"></div>
+      <ng-template #addLike>
+        <button ion-button clear small color="mainTheme" icon-start (click)="addToCollection(i)">
+          <ion-icon ios="md-heart-outline" md="md-heart-outline"></ion-icon>
+          {{novel.likes}} Likes
+        </button>
+      </ng-template>
+      <ng-template  #removeLike>
+        <button ion-button clear small color="mainTheme" icon-start (click)="removeCollection(i)">
+          <ion-icon ios="ios-heart" md="ios-heart"></ion-icon>
+          {{novel.likes}} Likes
+        </button>
+      </ng-template>
+    </ion-row>
+</ion-card>
+</ion-content>

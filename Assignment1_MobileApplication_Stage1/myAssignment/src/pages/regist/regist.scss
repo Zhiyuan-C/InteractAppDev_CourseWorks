@@ -1,0 +1,56 @@
+page-regist {
+    //ion-header area
+    .toolbar-ios {
+        padding-top: 26px;
+    }
+    .toolbar-ios ion-title {
+        padding-top: 20px;
+    }
+
+    //ion-content area
+    .list-ios {
+        margin-top: 50px;
+    }
+    // require text coulor and font size
+    .require {
+        color: red;
+        font-size: 2rem;
+    }
+    
+    //ion-item
+    .item-ios {
+        background-color: transparent;
+        padding: 0 40px;
+    }
+    .list-ios .item-block .item-inner {
+        padding: 0;
+    }
+    .list-ios > .item-block:first-child {
+        border-top: none;
+    }
+    //personal information text
+    p {
+        padding: 0 40px;
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .dateTime {
+        padding: 0 40px;
+    }
+    ion-input {
+        background-color: white;
+    }
+    .date {
+        background-color: white;
+        padding: 0;
+    }
+    ion-select {
+        background-color: white;
+    }
+    .button-ios {
+        margin-top: 30px;
+        box-shadow: 0px 2px 5px rgb(51, 63, 70);
+    }
+
+}

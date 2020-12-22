@@ -1,0 +1,30 @@
+<ion-header>
+    <div class="backgroundCover" (click)="navToProfile()">
+        <!-- User info -->
+        <ion-avatar id="userAvatar"><img id="avatar" src={{userAvatar}}></ion-avatar>
+        <div class="userInfo">
+            <h5>{{nickName}}</h5>
+            <p>View my profile</p>
+        </div>
+    </div>
+</ion-header>
+
+
+<ion-content>
+  <ion-item-group>
+      <ion-item-divider color="light" padding-top>Profile Setting</ion-item-divider>
+      <button ion-item (click)="navToEditProfile()">Edit Profile</button>
+  </ion-item-group>
+  <ion-item-group>
+      <ion-item-divider color="light">Novels</ion-item-divider>
+      <button ion-item (click)="navToNewDraft()">Create new draft</button>
+      <button ion-item (click)="navToDrafts()">View my draft</button>
+      <button ion-item (click)="navToCollection()">Collection</button>
+  </ion-item-group>
+  <ion-item-group>
+      <ion-item-divider color="light">OTHER</ion-item-divider>
+      <button ion-item (click)="navToLocation()">Locate Us</button>
+  </ion-item-group>
+  <button ion-button round color="mainTheme" (click)="logout()">Log out</button>
+  
+</ion-content>

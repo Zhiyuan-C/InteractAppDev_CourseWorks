@@ -1,0 +1,44 @@
+<ion-header>
+
+  <ion-navbar>
+    <div *ngIf="drafts.length == 0; then create; else edit"></div>
+    <ng-template #create><ion-title>Create New Draft</ion-title></ng-template>
+    <ng-template #edit><ion-title>Edit Draft</ion-title></ng-template>
+    
+    
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="drafts.length == 0; then newDraft; else editDraft"></div>
+  <ng-template #newDraft>
+    <ion-list>
+      <ion-item>
+        <ion-label stacked>Title</ion-label>
+        <ion-input type="text" [(ngModel)]="newTitle"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Content</ion-label>
+        <ion-textarea [(ngModel)]="newContent"></ion-textarea>
+      </ion-item>
+      <button ion-button color="mainTheme" round (click)="createNew()">Create Draft</button>
+    </ion-list>
+  </ng-template>
+  <ng-template #editDraft>
+    <ion-list>
+      <ion-item>
+        <ion-label stacked>Title</ion-label>
+        <ion-input type="text" [(ngModel)]="editTitle"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Content</ion-label>
+        <ion-textarea [(ngModel)]="editContent"></ion-textarea>
+      </ion-item>
+      <button ion-button color="mainTheme" round (click)="save()">Save Draft</button>
+    </ion-list>
+  </ng-template>
+  
+</ion-content>
+  

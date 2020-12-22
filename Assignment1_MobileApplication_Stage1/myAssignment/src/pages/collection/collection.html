@@ -1,0 +1,93 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Collection</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bgImg">
+  <!-- *ngFor="let novel of collections; index as i" -->
+  <!-- <div *ngFor="let novel of collections; index as i">{{novel.title}}</div> -->
+  <ion-card *ngFor="let novel of collections; index as i">
+    <ion-card-content (click)="novelPrev(i)">
+      <!-- {{novel[i].title}} -->
+      <ion-card-title>{{novel.title}}</ion-card-title>
+      <img class="novelCover"/>
+      <!-- Username and Novel Type -->
+      <ion-row class="ionCardRowA">
+        <div>
+          by <ion-icon class="userIcon" name="contact"></ion-icon> {{novel.nickName}}
+        </div>
+        <p>{{novel.type}}</p>
+      </ion-row>
+      <p class="caption">{{novel.caption}}</p>   
+    </ion-card-content>
+    <!-- Buttons -->
+    <ion-row no-padding class="ionCardButtons">
+      <div>
+        <button ion-button clear small color="mainTheme" icon-start (click)="removeCollection(i)">
+          <ion-icon ios="ios-heart" md="ios-heart"></ion-icon>
+          {{novel.likes}} Likes
+        </button>
+      </div>
+      <div>
+        <button ion-button clear small color="mainTheme" icon-start>
+          <ion-icon ios='md-text' md="md-text"></ion-icon>
+          Comment
+        </button>
+      </div>
+      <div>
+        <button ion-button clear small color="mainTheme" icon-start>
+          <ion-icon name='share-alt'></ion-icon>
+          Share
+        </button>
+      </div>
+    </ion-row>
+  </ion-card>
+  
+
+</ion-content>
+
+<!-- <ion-content padding class="bgImg">
+  <ion-card>
+      <ion-card-content (click)="novelPrev()">
+        <ion-card-title>Nine Inch Nails Live</ion-card-title>
+        <img class="novelCover"/> -->
+        <!-- Username and Novel Type -->
+        <!-- <ion-row class="ionCardRowA">
+          <div>
+            by <ion-icon class="userIcon" name="contact"></ion-icon> userName
+          </div>
+          <p>Novel Type</p>
+        </ion-row>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>   
+      </ion-card-content> -->
+      <!-- Buttons -->
+      <!-- <ion-row no-padding class="ionCardButtons">
+        <div>
+          <button ion-button clear small color="mainTheme" icon-start>
+            <ion-icon ios="md-heart-outline" md="md-heart-outline"></ion-icon>
+            Like
+          </button>
+        </div>
+        <div>
+          <button ion-button clear small color="mainTheme" icon-start>
+            <ion-icon ios='md-text' md="md-text"></ion-icon>
+            Comment
+          </button>
+        </div>
+        <div>
+          <button ion-button clear small color="mainTheme" icon-start>
+            <ion-icon name='share-alt'></ion-icon>
+            Share
+          </button>
+        </div>
+      </ion-row>
+  </ion-card>
+
+</ion-content> -->

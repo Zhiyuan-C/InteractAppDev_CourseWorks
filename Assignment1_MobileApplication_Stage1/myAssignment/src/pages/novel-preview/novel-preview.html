@@ -1,0 +1,41 @@
+<ion-header>
+
+    <h2>{{novelPrev.title}}</h2>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h5>Caption</h5>
+  <p>{{novelPrev.caption}}</p>
+  <p class="bold">Tags</p>
+  <div id="tag-container">
+      <button ion-button color="mainTheme" round *ngFor="let tag of novelPrev.tags">{{tag}}</button>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-item>
+      <button id="close" ion-button color="mainTheme" (click)="close()">
+          <ion-icon>&#10005;</ion-icon>
+          <div>Close</div>
+        </button>
+        <button id="read" ion-button color="mainTheme" (click)="navToReadNovel()">
+          <ion-icon name="ios-book-outline"></ion-icon>
+          <div>Read Novel</div>
+        </button>
+        <div *ngIf="novelPrev.collections == false; then addLike; else removeLike;"></div>
+        <ng-template #addLike>
+          <button id="like" ion-button color="mainTheme" (click)="addToCollection()">
+            <ion-icon ios="md-heart-outline" md="md-heart-outline"></ion-icon>
+            {{novelPrev.likes}} Likes
+          </button>
+        </ng-template>
+        <ng-template  #removeLike>
+          <button id="like" ion-button color="mainTheme" (click)="removeCollection()">
+            <ion-icon ios="ios-heart" md="ios-heart"></ion-icon>
+            {{novelPrev.likes}} Likes
+          </button>
+        </ng-template>
+  </ion-item>
+</ion-footer>

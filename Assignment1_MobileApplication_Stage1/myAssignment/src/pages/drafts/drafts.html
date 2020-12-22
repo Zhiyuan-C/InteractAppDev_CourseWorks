@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>My Drafts</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="drafts.length == 0; else show"></div>
+  <ng-template #show>
+
+    <ion-list >
+      <ion-item-sliding *ngFor="let draft of drafts; index as i">
+        <ion-item class="title" (click)="navToViewDraft(i)">
+          <div>{{draft.title}}</div>
+          <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon>
+        </ion-item>
+        <ion-item-options>
+          <button ion-button color="danger" (click)="delete(i)">Delete</button>
+        </ion-item-options>
+        <!-- <button ion-item  ></button> -->
+
+      </ion-item-sliding>
+      
+    </ion-list>
+  </ng-template>
+  
+
+</ion-content>

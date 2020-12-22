@@ -1,0 +1,86 @@
+page-user-profile {
+    #background {
+        background-image: url('../assets/imgs/bg.jpeg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 130px;
+    }
+    // // ion-navbar background color to transparent
+    // .toolbar-background-ios {
+    //     background-color: transparent;
+    // }
+    // // back button to white color
+    // .bar-button-default-ios {
+    //     color: white;
+    // }
+    // // Change the more option button color to white
+    // .bar-button-clear-ios {
+    //     color:white;
+    //     font-size: 2.5rem;
+    // }
+    // .bar-button-clear-ios.activated {
+    //     opacity: initial;
+    // }
+    // ion-avatar {
+    //     display: flex;
+    //     position: relative;
+    //     top: 20px;
+    //     justify-content: center;
+    // }
+    // // Main content
+    // #container {
+    //     position: relative;
+    // }
+    // #topContent {
+    //     position: absolute;
+    //     top: -20px;
+    // }
+
+    ion-card {
+        position: relative;
+        text-align: center;
+    }
+    .card-ios {
+        margin: 0;
+        border-radius: none;
+        width: auto;
+        height: 100%;
+    }
+    ion-card img {
+        max-width: none;
+        opacity: 0.5;
+        width: auto;
+        max-height: 100%;
+    }
+    .card-title {
+        position: absolute;
+        top: 36%;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: black;
+    }
+    .card-subtitle {
+        font-size: 1.5rem;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color: black;
+    }
+    #userAvatar {
+        position: absolute;
+        top: 20%;
+        left: 40%;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        border: 5px solid rgba(0, 0, 0, 0.8);
+        overflow: hidden;
+    }
+    #avatar {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+}

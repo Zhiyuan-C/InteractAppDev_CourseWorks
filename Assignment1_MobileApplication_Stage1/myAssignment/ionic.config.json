@@ -1,0 +1,8 @@
+{
+  "name": "Mercury Novel",
+  "app_id": "au.edu.griffith.Mercury",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
